@@ -14,12 +14,11 @@ read continued
 mkdir wses
 cd wses
 if [ "$continued" == "Y" ]; then
-   git clone git@bitbucket.org:shinhyunwook/alchemy.git
-   git clone git@bitbucket.org:shinhyunwook/algorithms.git
+   git clone git@github.com:hyunwookshin/alchemy.git
+   git clone git@github.com:hyunwookshin/algorithms.git
    git clone git@bitbucket.org:shinhyunwook/nginx.git
 fi
 
 sudo cp ~/wses/alchemy/nginx/*.conf /etc/nginx/
-
 
 cd ~/wses/alchemy/wses/frontend/frontend/ && make build
