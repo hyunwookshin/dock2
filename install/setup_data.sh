@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-mkdir /data
+sudo mkdir /data
 sudo mount /dev/xvdb /data
 sudo blkid
 

@@ -4,21 +4,21 @@ if [ "$USER" != "hshin" ]; then
    echo "Please run as 'hshin'"
    exit 1
 fi
-
+if [[ "1" == "" ]]; then
 sudo mkdir -p /usr/share/nginx/html/private/alchem/solutions/
-htpasswd -c /etc/nginx/.htpasswd hshin
-htpasswd -c /etc/nginx/.htpasswd testuser
-
-echo "Run ssh-keygen, and paste the key to bitbucket repository."
-read continued
-mkdir wses
-cd wses
-if [ "$continued" == "Y" ]; then
-   git clone git@github.com:hyunwookshin/alchemy.git
-   git clone git@github.com:hyunwookshin/algorithms.git
-   git clone git@bitbucket.org:shinhyunwook/nginx.git
+sudo mkdir -p /etc/nginx
+sudo htpasswd -c /etc/nginx/.htpasswd hshin
+sudo htpasswd -c /etc/nginx/.htpasswd testuser
 fi
+
+echo "Run ssh-keygen, and paste the key to github/bitbucket repositories. (then exit)"
+bash
+mkdir -p ~/wses
+cd ~/wses
+git clone git@github.com:hyunwookshin/alchemy.git
+git clone git@github.com:hyunwookshin/algorithms.git
+git clone git@bitbucket.org:shinhyunwook/nginx.git
 
 sudo cp ~/wses/alchemy/nginx/*.conf /etc/nginx/
 
-cd ~/wses/alchemy/wses/frontend/frontend/ && make build
+cd ~/wses/alchemy/src/frontend/frontend/ && make build

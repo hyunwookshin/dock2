@@ -6,8 +6,8 @@ fi
 
 set -e
 
-echo "Installing Mosh...."
-sudo yum install mosh -y
+# echo "Installing Mosh...."
+# sudo yum install mosh -y
 echo "Installing httpd-tools...."
 sudo yum install httpd-tools -y
 sudo setsebool httpd_can_network_connect on -P # see link below
@@ -23,6 +23,7 @@ sudo yum install epel-release -y
 echo "Installing python2 and numpy...."
 # sudo yum install python-pip -y
 # for centos 8 and above run
+sudo yum install python2-devel -y
 curl -O https://bootstrap.pypa.io/pip/2.7/get-pip.py
 python2 get-pip.py
 pip install numpy==1.16.6 # python 2.7
@@ -43,5 +44,5 @@ sudo ./aws/install
 echo "Installing mysql..."
 sudo yum install mysql -y
 sudo yum groupinstall "Development Tools" -y
-sudo yum install python2-devel -y
+sudo yum install mysql-devel -y
 pip install mysqlclient
