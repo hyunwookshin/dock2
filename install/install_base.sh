@@ -27,6 +27,7 @@ sudo yum install python2-devel -y
 curl -O https://bootstrap.pypa.io/pip/2.7/get-pip.py
 python2 get-pip.py
 pip install numpy==1.16.6 # python 2.7
+pip install pyyaml
 echo "Installing tmux, screen and vim...."
 sudo yum install tmux -y
 sudo yum install screen -y
