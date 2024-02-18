@@ -14,3 +14,4 @@ cp config/.vimrc ~/.vimrc
 cp config/.screenrc ~/.screenrc
 mkdir ~/.vim/colors
 cp config/xoria256.vim ~/.vim/colors/
+cp config/.tmux.conf ~
