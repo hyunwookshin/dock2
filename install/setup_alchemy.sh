@@ -11,7 +11,7 @@ sudo htpasswd -c /etc/nginx/.htpasswd hshin
 sudo htpasswd -c /etc/nginx/.htpasswd testuser
 fi
 
-echo "Run ssh-keygen, and paste the key to github/bitbucket repositories. (then exit)"
+echo "Run 'ssh-keygen', and paste the key to github/bitbucket repositories. (then exit)."
 bash
 mkdir -p ~/wses
 cd ~/wses

@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 
 if [ "$USER" != "hshin" ]; then
-   echo "Please run as 'hshin'"
+   sudo adduser hshin
+   sudo passwd hshin
+   sudo usermod -aG wheel hshin
+   echo "Run 'sudo visudo', and uncomment '%wheel  ALL=(ALL)   ALL'. Also enable password. This is a separate bash session:"
+   bash
+   echo "Please run this script again as 'hshin'"
    exit 1
 fi
 
