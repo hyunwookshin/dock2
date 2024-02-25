@@ -29,6 +29,7 @@ python2 get-pip.py
 pip install numpy==1.16.6 # python 2.7
 pip install pyyaml
 pip install prettytable
+pip install binarytree
 echo "Installing tmux, screen and vim...."
 sudo yum install tmux -y
 sudo yum install screen -y
