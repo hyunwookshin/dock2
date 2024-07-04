@@ -28,6 +28,10 @@ function S() {
   screen -S $1                                                                                                                             
 }
 
+function x() {
+  chmod a+x $1
+}
+
 function sba() {
   source $HOME/.bashrc
 }
